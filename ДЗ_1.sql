@@ -36,13 +36,13 @@ SELECT product_name, manufacturer  FROM mobile_phones WHERE manufacturer = 'Sams
 
 -- * Задача 4. (по желанию)* С помощью регулярных выражений найти:
 -- 4.1. Товары, в которых есть упоминание "Iphone"
-SELECT product_name, manufacturer FROM mobile_phones WHERE product_name LIKE'Iphone%';
+SELECT product_name, manufacturer FROM mobile_phones WHERE product_name LIKE'%Iphone%';
 
 -- 4.2. Товары, в которых есть упоминание "Samsung"
-SELECT product_name, manufacturer FROM mobile_phones WHERE manufacturer LIKE'Samsung%';
+SELECT product_name, manufacturer FROM mobile_phones WHERE manufacturer LIKE'%Samsung%';
 
 -- 4.3. Товары, в которых есть ЦИФРЫ
--- SELECT id, product_name FROM mobile_phones WHERE product_name =    ;
+SELECT product_name FROM mobile_phones WHERE product_name REGEXP '[0-9]';
 
 -- 4.4. Товары, в которых есть ЦИФРА "8"
--- SELECT id, product_name FROM mobile_phones WHERE product_name =    ;
+SELECT product_name FROM mobile_phones WHERE product_name LIKE '%8%';
